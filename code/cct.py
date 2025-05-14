@@ -18,7 +18,7 @@ def cct_model(plant_know):
          D_reshaped = D[:, None]
          p = Z * D_reshaped + (1 - Z) * (1 - D_reshaped)
          pm.Bernoulli('X', p=p, observed=data)
-         trace = pm.sample(draws=draws, tune=tune, chains=chains)
+         trace = pm.sample(draws=draws, tune=tune, chains=chains) #Used AI to determine parameters
     return trace
 
 
@@ -37,8 +37,8 @@ def show_results(trace, data):
     for j, prob in enumerate(Z_consensus):
         print(f"Item {j+1}: Mean = {prob:.3f}, Estimated = {int(round(prob))}")
     az.plot_posterior(trace, var_names=['Z'])
-              
-                      
+
+
     majority_vote = np.round(data.mean(axis=0))
     for i, majority in enumerate(majority_vote):
             print(f"Item {i+1}: {int(majority)}")
