@@ -10,7 +10,7 @@ The results of the informants' competency (D) are that 5 of them have low compet
 
 For the consensus (Z) results, a mean that is closer to 0 indicates that the cultural consensus about the response is false, and a mean that is closer to 1 indcates that the response is true. Consensus responses that fall closer to the middle (~0.5) demonstrate that there is disagreement even among knowledgeable informants over the consensus response. Item 5, which has a mean of 0.554, illustrates this phenomenon.
 
-In the Diagnostics Summary, all of the **r_hat** values are 1.00, implying that the model converged. Convergence indicates the legitimacy of the **cct_model** block's samples for estimating consensus (Z) and competence (D).
+In the Diagnostics Summary, all of the **r_hat** values are 1.00, implying that the model converged. Convergence indicates that the sample selected in the **cct_model** block are reliable for estimating consensus (Z) and competence (D).
 
 
 ## Majority Vote Comparison
